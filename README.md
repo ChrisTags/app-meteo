@@ -1,4 +1,4 @@
-<img width="1280" height="640" alt="meteo" src="https://github.com/user-attachments/assets/547e911b-6e89-46e4-8ba2-9be886385d53" />
+<img width="1280" height="640" alt="664057036-547e911b-6e89-46e4-8ba2-9be886385d53" src="https://github.com/user-attachments/assets/52c345b9-7257-497c-a364-948c6dd117cc" />
 
 ## Objectif du projet
 
