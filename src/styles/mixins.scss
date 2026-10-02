@@ -1,0 +1,31 @@
+// src/styles/mixins.scss
+
+@use "./variables.scss" as *;
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin gridCenter {
+  display: grid;
+  place-items: center;
+}
+
+@mixin button {
+  font-size: 16px;
+  padding: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  border-radius: $radius-m;
+}
+
+@mixin input {
+  margin-right: 15px;
+  width: 400px;
+  border: none;
+  padding: 1rem;
+  font-size: 1.2rem;
+}

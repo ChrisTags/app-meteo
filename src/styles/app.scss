@@ -1,0 +1,117 @@
+@use "./index.scss" as *;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: $dark;
+  @include gridCenter;
+  padding-top: $space-l;
+}
+
+/* Form */
+
+.formContainer {
+  input {
+    @include input;
+  }
+
+  button {
+    @include button;
+    color: $light;
+    background-color: $red;
+
+    &:hover {
+      background-color: $red-hover;
+    }
+  }
+}
+
+/* City title & weather */
+
+.cityTitle {
+  margin-top: $space-l;
+  text-align: center;
+
+  h1 {
+    color: $light;
+  }
+
+  h2 {
+    color: $red;
+  }
+
+  .meteo {
+    margin-top: $space-m;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    padding-top: $space-s;
+    background-color: $light;
+    margin-bottom: $space-xl;
+    border-radius: $radius-xl;
+
+    h2 {
+      color: $dark;
+    }
+
+    .temp {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+  }
+}
+
+/* Loader */
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  border: 3px solid;
+  border-color: #fff #fff transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  margin-top: $space-m;
+}
+
+.loader::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  border: 3px solid;
+  border-color: transparent crimson crimson;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  animation: rotationBack 0.5s linear infinite;
+  transform-origin: center center;
+}
+
+/* Animations */
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
